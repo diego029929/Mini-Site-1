@@ -75,10 +75,30 @@
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s ease;
+      cursor: pointer;
     }
 
     .cta:hover {
       background-color: #c89e30;
+    }
+
+    /* Section cachée */
+    #univers {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1s ease, padding 1s ease;
+      padding: 0 2rem;
+      background-color: #f9f9f9;
+    }
+
+    #univers.visible {
+      max-height: 500px;
+      padding: 4rem 2rem;
+    }
+
+    #univers h2 {
+      font-size: 1.8rem;
+      color: #111;
     }
   </style>
 </head>
@@ -97,22 +117,34 @@
   <section id="accueil">
     <h2>Parfum • Mode • Raffinement</h2>
     <p>Un univers de sophistication et d’élégance à portée de main.</p>
-    <a class="cta" href="#" onclick="alert('Bienvenue dans l’univers Maison Élégance – Explorez nos créations avec style.'); return false;">Découvrir</a>
+    <div class="cta" onclick="reveal()">Découvrir</div>
+  </section>
+
+  <section id="univers">
+    <h2>L’Univers Élégance</h2>
+    <p>Vous entrez dans un monde confidentiel, où chaque détail compte. Chez Maison Élégance, le luxe n’est pas une option — c’est une philosophie de vie.</p>
   </section>
 
   <section id="parfums">
     <h2>Nos Parfums</h2>
-    <p>Une collection exclusive d’essences rares, conçues pour capturer l’émotion pure. Chaque parfum incarne un moment, un souvenir, une signature.</p>
+    <p>Essences rares, émotions pures. Chaque flacon est une œuvre, chaque fragrance une déclaration.</p>
   </section>
 
   <section id="mode">
     <h2>Mode & Élégance</h2>
-    <p>Des silhouettes épurées, des matières nobles, une vision intemporelle du style. Notre collection célèbre la beauté du détail et la force du minimalisme.</p>
+    <p>Style sculpté dans le silence. Notre mode parle bas, mais marque fort.</p>
   </section>
 
   <section id="apropos">
     <h2>À propos</h2>
-    <p>Depuis plus de deux décennies, Maison Élégance incarne l’art de vivre à la française. Entre tradition et modernité, nous façonnons un luxe sincère, discret et affirmé.</p>
+    <p>Depuis plus de deux décennies, Maison Élégance incarne l’art de vivre à la française. Luxe discret, prestige assumé.</p>
   </section>
+
+  <script>
+    function reveal() {
+      document.getElementById('univers').classList.add('visible');
+      document.getElementById('univers').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
