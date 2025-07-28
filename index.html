@@ -6,6 +6,10 @@
   <title>Maison Élégance</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -45,6 +49,13 @@
     section {
       text-align: center;
       padding: 3rem 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     .cta {
@@ -76,18 +87,36 @@
     <h1>Maison Élégance</h1>
     <p>Découvrez l'essence du luxe français</p>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="parfums.html">Parfums</a>
-      <a href="mode.html">Mode</a>
-      <a href="apropos.html">À propos</a>
+      <a href="#accueil">Accueil</a>
+      <a href="#parfums">Parfums</a>
+      <a href="#mode">Mode</a>
+      <a href="#apropos">À propos</a>
     </nav>
   </header>
 
-  <section>
-    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem;">Parfum • Mode • Raffinement</h2>
+  <section id="accueil">
+    <h2>Parfum • Mode • Raffinement</h2>
     <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=80" alt="Luxe" class="hero-image" />
     <p style="margin-top: 1.5rem; font-size: 1.1rem;">Un univers de sophistication et d’élégance à portée de main.</p>
-    <a class="cta" href="parfums.html">Découvrir</a>
+    <a class="cta" href="#parfums">Découvrir</a>
+  </section>
+
+  <section id="parfums">
+    <h2>Nos Parfums</h2>
+    <p>Une collection exclusive d’essences rares et précieuses, capturant l’âme du raffinement français.</p>
+    <img src="https://images.unsplash.com/photo-1614032685203-3fbe5e2b3a84?auto=format&fit=crop&w=900&q=80" alt="Parfum" class="hero-image" />
+  </section>
+
+  <section id="mode">
+    <h2>Mode & Élégance</h2>
+    <p>Des lignes pures, des coupes impeccables : notre vision du style, entre tradition et modernité.</p>
+    <img src="https://images.unsplash.com/photo-1618354691215-998c96ddcc45?auto=format&fit=crop&w=900&q=80" alt="Mode" class="hero-image" />
+  </section>
+
+  <section id="apropos">
+    <h2>À propos de nous</h2>
+    <p>Maison Élégance incarne l’héritage du luxe à la française. Depuis plus de 20 ans, nous célébrons le savoir-faire, la passion et l’authenticité.</p>
+    <img src="https://images.unsplash.com/photo-1532634726-8b9fb99825c7?auto=format&fit=crop&w=900&q=80" alt="Élégance" class="hero-image" />
   </section>
 </body>
 </html>
